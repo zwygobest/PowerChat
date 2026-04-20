@@ -1,0 +1,20 @@
+# Web 框架
+fastapi>=0.110,<1.0
+uvicorn[standard]>=0.29
+
+# 数据库
+sqlalchemy>=2.0
+asyncmy>=0.2.9
+alembic>=1.13
+
+# 缓存
+redis>=5.0
+
+# 配置 & 校验
+pydantic>=2.6
+pydantic-settings>=2.2
+
+# 鉴权
+bcrypt>=4.0
+python-jose[cryptography]>=3.3
+python-multipart>=0.0.9

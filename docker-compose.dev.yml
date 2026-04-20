@@ -1,0 +1,27 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: powerchat_mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: powerchat123
+      MYSQL_DATABASE: powerchat
+      MYSQL_USER: powerchat
+      MYSQL_PASSWORD: powerchat123
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  redis:
+    image: redis:7-alpine
+    container_name: powerchat_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+volumes:
+  mysql_data:
+  redis_data:
