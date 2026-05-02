@@ -18,3 +18,7 @@ pydantic-settings>=2.2
 bcrypt>=4.0
 python-jose[cryptography]>=3.3
 python-multipart>=0.0.9
+
+# 测试 / 开发工具
+websockets>=12
+httpx>=0.27

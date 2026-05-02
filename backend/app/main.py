@@ -1,13 +1,19 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, WebSocket
 from sqlalchemy import text
 
 from app.api.v1.router import api_router
 from app.config import settings
 from app.database import engine
 from app.redis_client import redis_client
+from app.websocket.handler import ws_endpoint
 
 app = FastAPI(title="PowerChat API", debug=settings.DEBUG)
 app.include_router(api_router)
+
+
+@app.websocket("/ws")
+async def websocket_route(websocket: WebSocket) -> None:
+    await ws_endpoint(websocket)
 
 
 @app.get("/health")
