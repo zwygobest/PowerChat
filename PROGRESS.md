@@ -280,6 +280,5 @@ git push                                   # 已配 -u origin main，省参数
 
 ## 待办的小尾巴（不紧急）
 
-- [ ] `ssh-add --apple-use-keychain ~/.ssh/id_ed25519` 让 SSH 不再问 passphrase
 - [ ] 把外层 vibe-coding 仓库的 .gitignore 加上 `PowerChat/`，避免它继续追踪 PowerChat 改动
 - [ ] 1.1 的 Refresh Token 机制（目前只有 access token，60 分钟过期就要重新登录）—— 后期补
